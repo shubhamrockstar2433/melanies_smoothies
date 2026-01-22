@@ -7,6 +7,8 @@ from snowflake.snowpark.context import get_active_session
 # Write directly to the app
 st.title("Customize Your Smoothie :cup_with_straw:")
 st.write("Choose the fruits you want in your smoothie")
+st.write("App started")
+
 
 title = st.text_input('Name on Smoothie:')
 st.write('The Name on your Smoothie will be:',title)
