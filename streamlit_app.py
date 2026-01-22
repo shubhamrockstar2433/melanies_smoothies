@@ -1,7 +1,7 @@
 # Import python packages
 import streamlit as st
 from snowflake.snowpark.functions import col,when_matched
-from snowflake.snowpark.context import get_active_session
+#from snowflake.snowpark.context import get_active_session
 
 
 # Write directly to the app
@@ -13,7 +13,7 @@ st.write("App started")
 title = st.text_input('Name on Smoothie:')
 st.write('The Name on your Smoothie will be:',title)
 
-session = get_active_session()
+#session = get_active_session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('fruit_name'))
 cnx=st.connection("snowflake")
 session=cnx.session()
