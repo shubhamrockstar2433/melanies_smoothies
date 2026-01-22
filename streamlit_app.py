@@ -18,6 +18,8 @@ st.write('The Name on your Smoothie will be:',title)
 cnx=st.connection("snowflake")
 session=cnx.session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('fruit_name'))
+st.dataframe(data=my_dataframe, use_container_width=True)
+st.stop()
 
 #st.dataframe(data=my_dataframe, use_container_width=True)
 #editable_df = st.data_editor(my_dataframe) -- commented by me
