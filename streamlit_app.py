@@ -14,9 +14,10 @@ title = st.text_input('Name on Smoothie:')
 st.write('The Name on your Smoothie will be:',title)
 
 #session = get_active_session()
-my_dataframe = session.table("smoothies.public.fruit_options").select(col('fruit_name'))
 cnx=st.connection("snowflake")
 session=cnx.session()
+my_dataframe = session.table("smoothies.public.fruit_options").select(col('fruit_name'))
+
 #st.dataframe(data=my_dataframe, use_container_width=True)
 #editable_df = st.data_editor(my_dataframe) -- commented by me
 
